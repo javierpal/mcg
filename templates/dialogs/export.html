@@ -1,0 +1,22 @@
+<md-dialog class="fullscreen-dialog export-dialog" aria-label="Clipboard dialog" layout="row">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="true">
+        <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools">Output Formats</h1>
+        </md-toolbar>
+        <md-content layout-padding>
+            <md-list ng-cloak>
+                <md-list-item class="md-clickable" ng-repeat="format in formats">
+                    <md-button ng-click="setCodeTo(format.key)"> {{ format.name }} </md-button>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+    <md-content layout="column">
+        <div ng-bind-html="code"></div>
+        <div class="md-actions">
+            <md-button ng-click="closeDialog()">
+                Close
+            </md-button>
+        </div>
+    </md-content>
+</md-dialog>
