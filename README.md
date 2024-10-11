@@ -1,9 +1,9 @@
 ## this is a fork of the Magerial Design Color Generator from 
-![GitHub Repo](https://github.com/mbitson/mcg)
+[https://github.com/mbitson/mcg](https://github.com/mbitson/mcg)
 
 ## Just to fix the dependencies and deploy it on Github Pages, so you can test it out in the following link
 
-![GitHub Page](https://javierpal.github.io/mcg)
+[https://javierpal.github.io/mcg](https://javierpal.github.io/mcg)
 
 ## Next the last Readme of the orinal repo.
 
