@@ -1,0 +1,44 @@
+# This is a basic workflow to help you get started with Actions
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+# Define the job
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Setup Node.js (using version 7)
+      - name: Setup Node.js 7
+        uses: actions/setup-node@v3
+        with:
+          node-version: 7.10
+
+      # Install Bower globally
+      - name: Install Bower
+        run: npm install -g bower
+
+      - name: Install Bower NPM Resolver
+        run: npm install -g bower-npm-resolver
+
+      # Install project dependencies using Bower
+      - name: Install dependencies
+        run: bower install
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Directory to deploy
