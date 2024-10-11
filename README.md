@@ -1,3 +1,12 @@
+## this is a fork of the Magerial Design Color Generator from 
+![GitHub Repo](https://github.com/mbitson/mcg)
+
+## Just to fix the dependencies and deploy it on Github Pages, so you can test it out in the following link
+
+![GitHub Page](https://javierpal.github.io/mcg)
+
+## Next the last Readme of the orinal repo.
+
 # Material Design Color Generator
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/mbitson/mcg?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/mbitson/mcg?style=flat-square)
